@@ -1,0 +1,34 @@
+.board {
+  background-image: url(images/board.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.lines {
+  background-image: url(images/lines.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.cell {
+  display: inline-block;
+  width: 33%;
+  height: 33%;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* lines are not straight */
+.cell:first-child {
+  background-position: right;
+}
+.cell:last-child {
+  background-position: left;
+}
