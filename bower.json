@@ -1,0 +1,21 @@
+{
+  "name": "tic-tac-toe",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mario Lamacchia <mario@appstrakt.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mariolamacchia/smarttv-tictactoe",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0"
+  }
+}
