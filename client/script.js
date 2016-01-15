@@ -28,8 +28,8 @@ $(document).ready(function() {
 
   $('.cell').click(function() {
     smarttv.send({
-      x: this.id[1],
-      y: this.id[2],
-    })
+      x: Number(this.id[1]),
+      y: Number(this.id[2])
+    });
   });
 });

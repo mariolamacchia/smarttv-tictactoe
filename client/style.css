@@ -142,10 +142,10 @@ h2 {
   background-position: left;
 }
 
-.cell.x {
+.cell.X {
   background-image: url(images/x.png)
 }
 
-.cell.o {
+.cell.O {
   background-image: url(images/o.png)
 }
