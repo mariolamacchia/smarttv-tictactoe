@@ -16,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.2.0"
+    "jquery": "~2.2.0",
+    "webtris": "git+https://github.com/mariolamacchia/WebTris.git",
+    "socket.io-client": "~1.4.4"
   }
 }

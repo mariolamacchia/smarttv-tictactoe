@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/mariolamacchia/smarttv-tictactoe#readme",
   "dependencies": {
-    "webtris": "git+https://github.com/mariolamacchia/WebTris.git"
+    "jquery": "^2.2.0"
   }
 }

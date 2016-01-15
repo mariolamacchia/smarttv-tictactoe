@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <title>SmartTv Empty app</title>
   <link rel="stylesheet" href="client/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="board">
-    <div class="lines">
+    <h1>Tic Tac Toe</h1>
+    <h2>Waiting for players...</h2>
+    <div class="player-x"><span></span></div>
+    <div class="player-o"><span></span></div>
+    <div class="lines hidden">
 
     </div>
   </div>
-  <!-- <script>smarttv = require(process.cwd() + '/lib-ser')</script> -->
+  <script>smarttv = require(process.cwd() + '/lib-ser')</script>
+  <script src="client/bower_components/webtris/TicTacToe.js"></script>
   <script src="script.js"></script>
+  <script src="client/lines.js"></script>
 </body>
 </html>
