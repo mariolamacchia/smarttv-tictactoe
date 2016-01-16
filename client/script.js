@@ -11,6 +11,17 @@ smarttv.on('message', function(msg) {
   } else if (msg === 'draw') {
     $('h2').hide();
     $('.lines').show();
+  } else if (msg === 'lose' || msg === 'win') {
+    $('h2').show();
+    $('.lines').hide();
+    $('.cell').removeClass('O').removeClass('X');
+    if (msg === 'lose') {
+      $('h2').text('You lose :(');
+    } else {
+      $('h2').text('You win!!!');
+    }
+  } else if (msg.hasOwnProperty('x')) {
+    $('#i' + msg.x + msg.y).addClass(msg.sign);
   }
 });
 
