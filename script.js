@@ -19,13 +19,21 @@ smarttv.on('connect', function(client) {
 });
 
 smarttv.on('disconnect', function(client) {
-  if (game.players[1] && game.players[1].id === client) {
-    game.players.splice(1, 1);
-    $('.player-o span').text('');
-  }
-  if (game.players[0] && game.players[0].id === client) {
-    game.players.splice(0, 1);
-    $('.player-x span').text('');
+  if (game.isOpen) {
+    if (game.players[0] === game.getCurrentPlayer()) {
+      game.win(game.players[1]);
+    } else {
+      game.win(game.players[0]);
+    }
+  } else {
+    if (game.players[1] && game.players[1].id === client) {
+      game.players.splice(1, 1);
+      $('.player-o span').text('');
+    }
+    if (game.players[0] && game.players[0].id === client) {
+      game.players.splice(0, 1);
+      $('.player-x span').text('');
+    }
   }
 });
 
