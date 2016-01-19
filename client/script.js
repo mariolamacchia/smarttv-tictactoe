@@ -8,17 +8,19 @@ smarttv.on('message', function(msg) {
     $('h2').text('Waiting for another player');
   } else if (msg === 'ready') {
     $('h2').text('Ready to play!');
-  } else if (msg === 'draw') {
+  } else if (msg === 'start') {
     $('h2').hide();
     $('.lines').show();
-  } else if (msg === 'lose' || msg === 'win') {
+  } else if (msg === 'lose' || msg === 'win' || msg === 'draw') {
     $('h2').show();
     $('.lines').hide();
     $('.cell').removeClass('O').removeClass('X');
     if (msg === 'lose') {
       $('h2').text('You lose :(');
-    } else {
+    } else if (msg === 'win') {
       $('h2').text('You win!!!');
+    } else {
+      $('h2').text('Draw!');
     }
   } else if (msg.hasOwnProperty('x')) {
     $('#i' + msg.x + msg.y).addClass(msg.sign);

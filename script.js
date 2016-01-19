@@ -110,7 +110,7 @@ function startGame() {
   $('h2').hide();
   $('.lines').show();
   game.start();
-  send('draw');
+  send('start');
 }
 
 function send(msg) {
